@@ -1,11 +1,105 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<head>
+  <title><%= title %></title>
+  <%include style.ejs%>
+</head>
+<body>
+<el-container id="app">
+  <el-aside width="200px">
+    <div><span class="title">{{title}}</span></div>
+    <el-menu default-active="1">
+      <el-menu-item index="1">
+        <i class="el-icon-s-home"></i>
+        <span slot="title">主页</span>
+      </el-menu-item>
+      <el-submenu index="2">
+        <template slot="title">
+          <i class="el-icon-menu"></i>
+          <span slot="title">菜单</span>
+        </template>
+          <el-menu-item index="1-1">选项1</el-menu-item>
+          <el-menu-item index="1-2">选项2</el-menu-item>
+      </el-submenu>
+      <el-menu-item index="3">
+        <i class="el-icon-document"></i>
+        <span slot="title">文档</span>
+      </el-menu-item>
+      <el-menu-item index="4">
+        <i class="el-icon-setting"></i>
+        <span slot="title">设置</span>
+      </el-menu-item>
+    </el-menu>
+  </el-aside>
+  <el-container>
+    <el-header>
+      <el-menu default-active="1" mode="horizontal" @select="handleSelect" style="height: 59px;border: none">
+        <el-menu-item index="1">导航</el-menu-item>
+        <el-menu-item index="2">理财</el-menu-item>
+        <el-menu-item index="3">健康</el-menu-item>
+        <el-menu-item>
+          <el-input placeholder="" v-model="head_select" class="input-with-select">
+            <el-select v-model="s_select" slot="prepend" placeholder="请选择">
+              <el-option label="百度" value="1"></el-option>
+              <el-option label="Google" value="2"></el-option>
+              <el-option label="必应" value="3"></el-option>
+            </el-select>
+            <el-button slot="append" icon="el-icon-search"></el-button>
+          </el-input>
+        </el-menu-item>
+      </el-menu>
+    </el-header>
+    <el-main>
+      <div style="margin: 30px auto;width: 800px">
+        <el-input placeholder="请输入内容" v-model="inner_select" class="input-with-select">
+          <el-button slot="append" icon="el-icon-search"></el-button>
+        </el-input>
+      </div>
+      <div class="content">
+        <el-row :gutter="12">
+          <el-col :span="8">
+            <el-card shadow="hover">
+              <a href="https://cn.vuejs.org">
+                <span class="card-icon">
+                  <img src='/images/vuejs.png'>
+                </span>
+              </a>
+            </el-card>
+          </el-col>
+          <el-col :span="8">
+            <el-card shadow="hover">
+              2
+            </el-card>
+          </el-col>
+          <el-col :span="8">
+            <el-card shadow="hover">
+              3
+            </el-card>
+          </el-col>
+        </el-row>
+      </div>
+    </el-main>
+    <el-footer>Footer</el-footer>
+  </el-container>
+</el-container>
+</body>
+<%include script.ejs%>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            title:<%- JSON.stringify(title)%>,
+            activeIndex: '1',
+            activeIndex2: '1',
+            s_select:1,
+            head_select: '',
+            inner_select: ''
+        },
+        methods: {
+            handleSelect(key, keyPath) {
+                console.log(key, keyPath);
+            }
+        }
+    });
+</script>
 </html>
