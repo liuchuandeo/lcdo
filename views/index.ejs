@@ -37,7 +37,7 @@
                 <el-menu-item index="1">导航</el-menu-item>
                 <el-menu-item index="2">理财</el-menu-item>
                 <el-menu-item index="3">健康</el-menu-item>
-                <el-menu-item>
+                <el-menu-item style="float: right;width: 330px">
                     <el-input placeholder="" v-model="head_select" class="input-with-select">
                         <el-select v-model="s_select" slot="prepend" placeholder="请选择">
                             <el-option label="百度" value="1"></el-option>
@@ -50,384 +50,103 @@
             </el-menu>
         </el-header>
         <el-main>
-            <div style="margin: 0 auto 30px;width: 600px">
+            <div style="margin: 0 auto 30px;width: 500px">
                 <el-input placeholder="请输入内容" v-model="inner_select" class="input-with-select">
                     <el-button slot="append" icon="el-icon-search"></el-button>
                 </el-input>
             </div>
             <div class="content">
-                <el-row :gutter="20">
-                    <el-col :span="6">
-                        <el-card shadow="always">
-                            <a href="https://cn.vuejs.org" target="_blank">
-                <span class="card-icon">
-                  <img src='/images/logo/vuejs.png'>
-                </span>
-                                <span class="card-title">
-                  Vue
-                </span>
-                                <span class="card-describe">
-                  自底向上逐层应用的渐进式框架
-                </span>
-                            </a>
-                        </el-card>
-                    </el-col>
-                    <el-col :span="6">
-                        <el-card shadow="always">
-                            <a href="https://cn.vuejs.org" target="_blank">
-                <span class="card-icon">
-                  <img src='/images/logo/vuejs.png'>
-                </span>
-                                <span class="card-title">
-                  Vue
-                </span>
-                                <span class="card-describe">
-                  自底向上逐层应用的渐进式框架
-                </span>
-                            </a>
-                        </el-card>
-                    </el-col>
-                    <el-col :span="6">
-                        <el-card shadow="always">
-                            <a href="https://cn.vuejs.org" target="_blank">
-                <span class="card-icon">
-                  <img src='/images/logo/vuejs.png'>
-                </span>
-                                <span class="card-title">
-                  Vue
-                </span>
-                                <span class="card-describe">
-                  自底向上逐层应用的渐进式框架
-                </span>
-                            </a>
-                        </el-card>
-                    </el-col>
-                    <el-col :span="6">
-                        <el-card shadow="always">
-                            <a href="https://cn.vuejs.org" target="_blank">
-                <span class="card-icon">
-                  <img src='/images/logo/vuejs.png'>
-                </span>
-                                <span class="card-title">
-                  Vue
-                </span>
-                                <span class="card-describe">
-                  自底向上逐层应用的渐进式框架
-                </span>
-                            </a>
-                        </el-card>
-                    </el-col>
-                </el-row>
-                <el-row :gutter="20">
-                    <el-col :span="6">
-                        <el-card shadow="always">
-                            <a href="https://cn.vuejs.org" target="_blank">
-                <span class="card-icon">
-                  <img src='/images/logo/vuejs.png'>
-                </span>
-                                <span class="card-title">
-                  Vue
-                </span>
-                                <span class="card-describe">
-                  自底向上逐层应用的渐进式框架
-                </span>
-                            </a>
-                        </el-card>
-                    </el-col>
-                    <el-col :span="6">
-                        <el-card shadow="always">
-                            <a href="https://cn.vuejs.org" target="_blank">
-                <span class="card-icon">
-                  <img src='/images/logo/vuejs.png'>
-                </span>
-                                <span class="card-title">
-                  Vue
-                </span>
-                                <span class="card-describe">
-                  自底向上逐层应用的渐进式框架
-                </span>
-                            </a>
-                        </el-card>
-                    </el-col>
-                    <el-col :span="6">
-                        <el-card shadow="always">
-                            <a href="https://cn.vuejs.org" target="_blank">
-                <span class="card-icon">
-                  <img src='/images/logo/vuejs.png'>
-                </span>
-                                <span class="card-title">
-                  Vue
-                </span>
-                                <span class="card-describe">
-                  自底向上逐层应用的渐进式框架
-                </span>
-                            </a>
-                        </el-card>
-                    </el-col>
-                    <el-col :span="6">
-                        <el-card shadow="always">
-                            <a href="https://cn.vuejs.org" target="_blank">
-                <span class="card-icon">
-                  <img src='/images/logo/vuejs.png'>
-                </span>
-                                <span class="card-title">
-                  Vue
-                </span>
-                                <span class="card-describe">
-                  自底向上逐层应用的渐进式框架
-                </span>
-                            </a>
-                        </el-card>
-                    </el-col>
-                </el-row>
-                <el-row :gutter="20">
-                    <el-col :span="6">
-                        <el-card shadow="always">
-                            <a href="https://cn.vuejs.org" target="_blank">
-                <span class="card-icon">
-                  <img src='/images/logo/vuejs.png'>
-                </span>
-                                <span class="card-title">
-                  Vue
-                </span>
-                                <span class="card-describe">
-                  自底向上逐层应用的渐进式框架
-                </span>
-                            </a>
-                        </el-card>
-                    </el-col>
-                    <el-col :span="6">
-                        <el-card shadow="always">
-                            <a href="https://cn.vuejs.org" target="_blank">
-                <span class="card-icon">
-                  <img src='/images/logo/vuejs.png'>
-                </span>
-                                <span class="card-title">
-                  Vue
-                </span>
-                                <span class="card-describe">
-                  自底向上逐层应用的渐进式框架
-                </span>
-                            </a>
-                        </el-card>
-                    </el-col>
-                    <el-col :span="6">
-                        <el-card shadow="always">
-                            <a href="https://cn.vuejs.org" target="_blank">
-                <span class="card-icon">
-                  <img src='/images/logo/vuejs.png'>
-                </span>
-                                <span class="card-title">
-                  Vue
-                </span>
-                                <span class="card-describe">
-                  自底向上逐层应用的渐进式框架
-                </span>
-                            </a>
-                        </el-card>
-                    </el-col>
-                    <el-col :span="6">
-                        <el-card shadow="always">
-                            <a href="https://cn.vuejs.org" target="_blank">
-                <span class="card-icon">
-                  <img src='/images/logo/vuejs.png'>
-                </span>
-                                <span class="card-title">
-                  Vue
-                </span>
-                                <span class="card-describe">
-                  自底向上逐层应用的渐进式框架
-                </span>
-                            </a>
-                        </el-card>
-                    </el-col>
-                </el-row>
-                <el-row :gutter="20">
-                    <el-col :span="6">
-                        <el-card shadow="always">
-                            <a href="https://cn.vuejs.org" target="_blank">
-                <span class="card-icon">
-                  <img src='/images/logo/vuejs.png'>
-                </span>
-                                <span class="card-title">
-                  Vue
-                </span>
-                                <span class="card-describe">
-                  自底向上逐层应用的渐进式框架
-                </span>
-                            </a>
-                        </el-card>
-                    </el-col>
-                    <el-col :span="6">
-                        <el-card shadow="always">
-                            <a href="https://cn.vuejs.org" target="_blank">
-                <span class="card-icon">
-                  <img src='/images/logo/vuejs.png'>
-                </span>
-                                <span class="card-title">
-                  Vue
-                </span>
-                                <span class="card-describe">
-                  自底向上逐层应用的渐进式框架
-                </span>
-                            </a>
-                        </el-card>
-                    </el-col>
-                    <el-col :span="6">
-                        <el-card shadow="always">
-                            <a href="https://cn.vuejs.org" target="_blank">
-                <span class="card-icon">
-                  <img src='/images/logo/vuejs.png'>
-                </span>
-                                <span class="card-title">
-                  Vue
-                </span>
-                                <span class="card-describe">
-                  自底向上逐层应用的渐进式框架
-                </span>
-                            </a>
-                        </el-card>
-                    </el-col>
-                    <el-col :span="6">
-                        <el-card shadow="always">
-                            <a href="https://cn.vuejs.org" target="_blank">
-                <span class="card-icon">
-                  <img src='/images/logo/vuejs.png'>
-                </span>
-                                <span class="card-title">
-                  Vue
-                </span>
-                                <span class="card-describe">
-                  自底向上逐层应用的渐进式框架
-                </span>
-                            </a>
-                        </el-card>
-                    </el-col>
-                </el-row>
-                <el-row :gutter="20">
-                    <el-col :span="6">
-                        <el-card shadow="always">
-                            <a href="https://cn.vuejs.org" target="_blank">
-                <span class="card-icon">
-                  <img src='/images/logo/vuejs.png'>
-                </span>
-                                <span class="card-title">
-                  Vue
-                </span>
-                                <span class="card-describe">
-                  自底向上逐层应用的渐进式框架
-                </span>
-                            </a>
-                        </el-card>
-                    </el-col>
-                    <el-col :span="6">
-                        <el-card shadow="always">
-                            <a href="https://cn.vuejs.org" target="_blank">
-                <span class="card-icon">
-                  <img src='/images/logo/vuejs.png'>
-                </span>
-                                <span class="card-title">
-                  Vue
-                </span>
-                                <span class="card-describe">
-                  自底向上逐层应用的渐进式框架
-                </span>
-                            </a>
-                        </el-card>
-                    </el-col>
-                    <el-col :span="6">
-                        <el-card shadow="always">
-                            <a href="https://cn.vuejs.org" target="_blank">
-                <span class="card-icon">
-                  <img src='/images/logo/vuejs.png'>
-                </span>
-                                <span class="card-title">
-                  Vue
-                </span>
-                                <span class="card-describe">
-                  自底向上逐层应用的渐进式框架
-                </span>
-                            </a>
-                        </el-card>
-                    </el-col>
-                    <el-col :span="6">
-                        <el-card shadow="always">
-                            <a href="https://cn.vuejs.org" target="_blank">
-                <span class="card-icon">
-                  <img src='/images/logo/vuejs.png'>
-                </span>
-                                <span class="card-title">
-                  Vue
-                </span>
-                                <span class="card-describe">
-                  自底向上逐层应用的渐进式框架
-                </span>
-                            </a>
-                        </el-card>
-                    </el-col>
-                </el-row>
-                <el-row :gutter="20">
-                    <el-col :span="6">
-                        <el-card shadow="always">
-                            <a href="https://cn.vuejs.org" target="_blank">
-                <span class="card-icon">
-                  <img src='/images/logo/vuejs.png'>
-                </span>
-                                <span class="card-title">
-                  Vue
-                </span>
-                                <span class="card-describe">
-                  自底向上逐层应用的渐进式框架
-                </span>
-                            </a>
-                        </el-card>
-                    </el-col>
-                    <el-col :span="6">
-                        <el-card shadow="always">
-                            <a href="https://cn.vuejs.org" target="_blank">
-                <span class="card-icon">
-                  <img src='/images/logo/vuejs.png'>
-                </span>
-                                <span class="card-title">
-                  Vue
-                </span>
-                                <span class="card-describe">
-                  自底向上逐层应用的渐进式框架
-                </span>
-                            </a>
-                        </el-card>
-                    </el-col>
-                    <el-col :span="6">
-                        <el-card shadow="always">
-                            <a href="https://cn.vuejs.org" target="_blank">
-                <span class="card-icon">
-                  <img src='/images/logo/vuejs.png'>
-                </span>
-                                <span class="card-title">
-                  Vue
-                </span>
-                                <span class="card-describe">
-                  自底向上逐层应用的渐进式框架
-                </span>
-                            </a>
-                        </el-card>
-                    </el-col>
-                    <el-col :span="6">
-                        <el-card shadow="always">
-                            <a href="https://cn.vuejs.org" target="_blank">
-                <span class="card-icon">
-                  <img src='/images/logo/vuejs.png'>
-                </span>
-                                <span class="card-title">
-                  Vue
-                </span>
-                                <span class="card-describe">
-                  自底向上逐层应用的渐进式框架
-                </span>
-                            </a>
-                        </el-card>
-                    </el-col>
-                </el-row>
+                <el-card shadow="always">
+                    <a href="https://cn.vuejs.org" target="_blank">
+                        <span class="card-icon">
+                          <img src='/images/logo/vuejs.png'>
+                        </span>
+                        <span class="card-title">
+                          Vue
+                        </span>
+                        <span class="card-describe">
+                          自底向上逐层应用的渐进式框架
+                        </span>
+                    </a>
+                </el-card>
+                <el-card shadow="always">
+                    <a href="https://cn.vuejs.org" target="_blank">
+                        <span class="card-icon">
+                          <img src='/images/logo/vuejs.png'>
+                        </span>
+                        <span class="card-title">
+                          Vue
+                        </span>
+                        <span class="card-describe">
+                          自底向上逐层应用的渐进式框架
+                        </span>
+                    </a>
+                </el-card>
+                <el-card shadow="always">
+                    <a href="https://cn.vuejs.org" target="_blank">
+                        <span class="card-icon">
+                          <img src='/images/logo/vuejs.png'>
+                        </span>
+                        <span class="card-title">
+                          Vue
+                        </span>
+                        <span class="card-describe">
+                          自底向上逐层应用的渐进式框架
+                        </span>
+                    </a>
+                </el-card>
+                <el-card shadow="always">
+                    <a href="https://cn.vuejs.org" target="_blank">
+                        <span class="card-icon">
+                          <img src='/images/logo/vuejs.png'>
+                        </span>
+                        <span class="card-title">
+                          Vue
+                        </span>
+                        <span class="card-describe">
+                          自底向上逐层应用的渐进式框架
+                        </span>
+                    </a>
+                </el-card>
+                <el-card shadow="always">
+                    <a href="https://cn.vuejs.org" target="_blank">
+                        <span class="card-icon">
+                          <img src='/images/logo/vuejs.png'>
+                        </span>
+                        <span class="card-title">
+                          Vue
+                        </span>
+                        <span class="card-describe">
+                          自底向上逐层应用的渐进式框架
+                        </span>
+                    </a>
+                </el-card>
+                <el-card shadow="always">
+                    <a href="https://cn.vuejs.org" target="_blank">
+                        <span class="card-icon">
+                          <img src='/images/logo/vuejs.png'>
+                        </span>
+                        <span class="card-title">
+                          Vue
+                        </span>
+                        <span class="card-describe">
+                          自底向上逐层应用的渐进式框架
+                        </span>
+                    </a>
+                </el-card>
+                <el-card shadow="always">
+                    <a href="https://cn.vuejs.org" target="_blank">
+                        <span class="card-icon">
+                          <img src='/images/logo/vuejs.png'>
+                        </span>
+                        <span class="card-title">
+                          Vue
+                        </span>
+                        <span class="card-describe">
+                          自底向上逐层应用的渐进式框架
+                        </span>
+                    </a>
+                </el-card>
             </div>
         </el-main>
         <el-footer>Footer</el-footer>

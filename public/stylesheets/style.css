@@ -20,22 +20,17 @@ body > .el-container > .el-aside{
 body > .el-container > .el-container{
   margin-left: 200px;
 }
-/*body > .el-container > .el-container > .el-header{*/
-  /*position: fixed;*/
-  /*width: 100%;*/
-  /*background-color: white;*/
-  /*z-index: 999;*/
-/*}*/
-/*body > .el-container > .el-container > .el-main{*/
-  /*margin-top: 60px;*/
-/*}*/
 
 .el-header, .el-footer {
   /*background-color: #B3C0D1;*/
-  border-bottom: 1px solid #D3DCE6;
   color: #333;
   text-align: center;
   line-height: 60px;
+}
+.el-header {
+    padding: 0 10px !important;
+    min-width: 600px;
+    border-bottom: 1px solid #D3DCE6;
 }
 .el-aside {
   border-right: solid 1px #e6e6e6;
@@ -59,17 +54,31 @@ body > .el-container > .el-container{
 .el-main {
   /*background-color: #E9EEF3;*/
   margin-top: 1px;
+    min-width: 600px;
   color: #333;
   text-align: center;
   /*line-height: 160px;*/
 }
 .el-main > .content{
-  width: 1000px;
-  margin: 10px auto;
+    margin: 10px auto;
+    padding-left: 20px;
+    min-width: 560px;
+    max-width: 1370px;
+    height: 100%;
 }
-
-.el-main > .content .el-row{
-  margin-bottom: 20px;
+.el-main > .content:after{
+    clear: both;
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+.el-main > .content .el-card{
+    float: left;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    width: 250px;
 }
 
 .el-main > .content .el-card a{
